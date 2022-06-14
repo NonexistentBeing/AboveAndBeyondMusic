@@ -25,3 +25,8 @@ který jsem nakonec zkompiloval do HTML a po minimálním zpracování vložil d
 -   **index.html** - landing page webové stránky
 -   **README.md** - popisuje projekt na repozitáři git
 -   **package.json** - obsahuje npm skripty na jednodušší development
+
+## How to run
+
+Ke spuštění stránky stačí mít nainstalovaný node.js a v terminállu napsat `npm install && npm run serve`
+nebo použít libovolný server a nasměrovat ho na kořenový adresář repozitáře
