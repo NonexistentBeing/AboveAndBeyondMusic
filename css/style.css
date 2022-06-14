@@ -262,6 +262,9 @@ a:hover {
   }
 }
 .page__hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   color: #e6e6e6;
   background-color: #333333;
@@ -271,6 +274,15 @@ a:hover {
   padding-top: 30px;
   padding-bottom: 50px;
   font-size: 1.3em;
+}
+.page__hero__paragraph {
+  margin: 0 25px;
+  max-width: 45ch;
+}
+@media screen and (max-width: 640px) {
+  .page__hero__paragraph {
+    font-size: 0.8em;
+  }
 }
 .page__article {
   font-size: 1.1em;
