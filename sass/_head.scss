@@ -1,0 +1,87 @@
+@use 'constants' as *;
+@use 'mixins';
+
+#hamburger {
+    background: none;
+    display: block;
+    border: none;
+    cursor: pointer;
+    color: $background;
+    padding: 20px 25px;
+    transition: filter ease 0.3s;
+
+    &:hover {
+        filter: brightness(70%);
+    }
+
+    &.active {
+        transform: rotate(180deg);
+    }
+}
+
+.page {
+    &__logo {
+        transition: ease filter 0.3s;
+        &:hover {
+            filter: brightness(70%);
+        }
+    }
+
+    &__header {
+        font-size: 1.1em;
+        background-color: $dark;
+
+        &__wrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            @include mixins.margin-lr;
+        }
+    }
+
+    &__nav {
+        display: block;
+        @include mixins.mobile {
+            display: none;
+        }
+
+        &--mobile {
+            position: relative;
+            display: none;
+            @include mixins.mobile {
+                display: block;
+            }
+
+            & > .page__nav__list {
+                width: 200px;
+                display: none;
+                background-color: darken($main, 40%);
+                list-style-type: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+
+        & > &__list {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__link {
+            display: block;
+            padding: 20px 25px;
+            color: $background;
+
+            &:hover {
+                color: lighten($main, 10%);
+            }
+        }
+    }
+}

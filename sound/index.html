@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The magic of sound</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body class="page">
+        <!-- HEADER -->
+
+        <header class="page__header">
+            <div class="page__header__wrap">
+                <a href="/">
+                    <img
+                        src="/img/logo.svg"
+                        class="img--block page__logo"
+                        alt="WaveSet"
+                        width="125"
+                    />
+                </a>
+                <nav class="page__nav">
+                    <ul class="page__nav__list">
+                        <li><a href="/" class="page__nav__link"> Home </a></li>
+                        <li>
+                            <a href="/sound" class="page__nav__link"> Sound </a>
+                        </li>
+                        <li>
+                            <a href="/music" class="page__nav__link"> Music </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="page__nav--mobile">
+                    <button id="hamburger">
+                        <img
+                            class="img--block"
+                            src="/img/hamburger_arrow.svg"
+                            alt="Arrow"
+                            width="30"
+                        />
+                    </button>
+                    <ul class="page__nav__list">
+                        <li><a href="/" class="page__nav__link"> Home </a></li>
+                        <li>
+                            <a href="/sound" class="page__nav__link"> Sound </a>
+                        </li>
+                        <li>
+                            <a href="/music" class="page__nav__link"> Music </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- MAIN CONTENT -->
+
+        <main class="page__main">
+            <!-- HERO -->
+
+            <section>
+                <div class="page__hero">
+                    <h1 class="h1--main">Sound</h1>
+                    <p>Where it all begins.</p>
+                </div>
+
+                <!-- PAGE CONTENT -->
+
+                <article class="page__article">
+                    <h2 id="themagicofsound">The magic of sound</h2>
+                    <p>
+                        Probably the best way to begin is by defining sound
+                        itself. What is sound? <strong>Sound</strong> is a
+                        signal - a value that changes over the course of time.
+                        In fact it's a <strong>bipolar signal</strong>, meaning
+                        its values can be both positive and negative. The
+                        easiest way to put, it is the strength of pressure, most
+                        often air pressure, which our ears then proceed to catch
+                        and process it accordingly.
+                    </p>
+                    <p>
+                        In real world, we deal with two kinds of signals, a
+                        <strong>periodic signal</strong>, which repeats over and
+                        over again, and random signal, more commonly referred to
+                        as <strong>noise</strong>. In most situations, sound is
+                        an intricate combination of these two.
+                    </p>
+                    <p>
+                        What do we measure in sound? There is a copious number
+                        of units we can look at, however there are three
+                        fundamental which we will look at. First off, we measure
+                        the immediate sound pressure in <em>decibels (dB)</em>.
+                        The second property we will look at is the
+                        <strong>amplitude</strong>, which is the absolute peak
+                        value of the signal. Last but not least we can measure
+                        is exclusively in periodic signals
+                        <strong>frequency</strong>, which is how many times the
+                        signal repeats over a certain time period. We call this
+                        unit one <em>hertz (Hz)</em>.
+                    </p>
+                    <h2 id="oscillators">Oscillators</h2>
+                    <figure style="float: right">
+                        <img
+                            src="/img/waves/waves.svg"
+                            alt="Wave shapes"
+                            width="200px"
+                        />
+                        <figcaption>
+                            Sine, Saw, Square and Triangle waves
+                        </figcaption>
+                    </figure>
+                    <p>
+                        So how do we make sound? We use
+                        <strong>oscillators</strong>, circuits that produce
+                        continuous and repeating wave. There are 4 well
+                        established wave shapes that oscillators commonly
+                        generate.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Sine</strong> - the fundamental building
+                            block of sound, every sound can be rebuilt with
+                            purely sine waves
+                        </li>
+                        <li>
+                            <strong id="saw-wave">Saw</strong> - sound wave
+                            which contains every harmonic overtone, they are
+                            usually used to fill the audible frequency spectrum,
+                            they are commonly referred to as "full"
+                        </li>
+                        <li>
+                            <strong>Square</strong> - waveshape whose value is
+                            constantly at the amplitude, it's a harmonic series
+                            which consist of odd
+                            <a href="#harmonics">harmonics</a>
+                        </li>
+                        <li>
+                            <strong>Triangle</strong> - very similar to square,
+                            except it has way fewer
+                            <a href="#harmonics">harmonics</a>
+                        </li>
+                    </ul>
+                    <p>
+                        A simple oscillator will generally only produce signal
+                        at one frequency and amplitude, which is not desired in
+                        the world of music, but as with everything, with some
+                        circuitry, we can bend the oscillator to our will to
+                        produce all the
+                        <a href="/music#music-from-nothing"
+                            >tones and rhythms</a
+                        >
+                        one would possibly demand.
+                    </p>
+                    <h2 id="harmonics">
+                        Hamonic overtones and the fundamental
+                    </h2>
+                    <p>
+                        As previously mentioned, a saw wave is constructed using
+                        a sine wave and its harmonics, so what are they? First
+                        we need a little bit of backtracing, every periodic
+                        signal has a frequency at which the values repeat. We
+                        call this the
+                        <strong>fundamental frequency</strong>, and if we have a
+                        sine wave playing at this frequency, we call it the
+                        fundamental. So what happens if we were to add a sine
+                        wave at a frequency multiplied by an integer greater
+                        than one? (we will call this integer n)
+                    </p>
+                    <p>
+                        Firstly, we can notice that it will fit in times into
+                        each iteration of the original signal, additionally, the
+                        combined sound doesn't feel as two playing
+                        simultaneously, it feels much more cohesive.
+                    </p>
+                    <p>
+                        So now back to saw wave - if we have a fundamental
+                        frequency at 100Hz, then a saw wave would be the
+                        infinite sum of harmonics at fractional amplitudes.
+                    </p>
+                    <p>
+                        <b>Optimization note:</b>
+                        <i
+                            >Technically, a sound can have infinitely many
+                            harmonics, but for performance sake, we usually
+                            render around 500 when we render them individually
+                        </i>
+                    </p>
+
+                    <h2 id="coming-soon">Coming soon</h2>
+                    <ul>
+                        <li>Filters</li>
+                        <li>Frequency modulation</li>
+                        <li>Sampling</li>
+                        <li>Effects</li>
+                        <li>Filters</li>
+                        <li>Digital and analog</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="page__footer">
+            <div>
+                <p>Created by Michal Janeček</p>
+            </div>
+        </footer>
+        <script>
+            const mobileNav = document.querySelector(
+                '.page__nav--mobile .page__nav__list'
+            );
+            const hamburger = document.getElementById('hamburger');
+            hamburger.addEventListener('click', () => {
+                mobileNav.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        </script>
+    </body>
+</html>

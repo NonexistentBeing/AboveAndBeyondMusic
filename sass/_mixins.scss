@@ -1,0 +1,62 @@
+@use 'constants' as *;
+
+@mixin mobile {
+    @media screen and (max-width: 640px) {
+        @content;
+    }
+}
+
+@mixin mobile-wide {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media($full, $tablet, $mobileW, $mobile) {
+    @if ($full) {
+        @content ($full);
+    }
+
+    @if ($tablet) {
+        @include tablet {
+            @content ($tablet);
+        }
+    }
+
+    @if ($mobileW) {
+        @include mobile-wide {
+            @content ($mobileW);
+        }
+    }
+
+    @if ($mobile) {
+        @include mobile {
+            @content ($mobile);
+        }
+    }
+}
+
+@mixin gradient($angle, $color1, $color2) {
+    background: $color1;
+    background: linear-gradient($angle, $color1 0%, $color2 100%);
+}
+
+@mixin margin-lr() {
+    @include media($padPc, $padTablet, $padMobileW, $padMobile) using ($value) {
+        margin-left: $value;
+        margin-right: $value;
+    }
+}
+
+@mixin padding-lr() {
+    @include media($padPc, $padTablet, $padMobileW, $padMobile) using ($value) {
+        padding-left: $value;
+        padding-right: $value;
+    }
+}

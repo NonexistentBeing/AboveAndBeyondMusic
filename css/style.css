@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Oswald:wght@400;700&family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+#hamburger {
+  background: none;
+  display: block;
+  border: none;
+  cursor: pointer;
+  color: #e6e6e6;
+  padding: 20px 25px;
+  transition: filter ease 0.3s;
+}
+#hamburger:hover {
+  filter: brightness(70%);
+}
+#hamburger.active {
+  transform: rotate(180deg);
+}
+
+.page__logo {
+  transition: ease filter 0.3s;
+}
+.page__logo:hover {
+  filter: brightness(70%);
+}
+.page__header {
+  font-size: 1.1em;
+  background-color: #242424;
+}
+.page__header__wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+@media screen and (max-width: 1024px) {
+  .page__header__wrap {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page__header__wrap {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .page__header__wrap {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+.page__nav {
+  display: block;
+}
+@media screen and (max-width: 640px) {
+  .page__nav {
+    display: none;
+  }
+}
+.page__nav--mobile {
+  position: relative;
+  display: none;
+}
+@media screen and (max-width: 640px) {
+  .page__nav--mobile {
+    display: block;
+  }
+}
+.page__nav--mobile > .page__nav__list {
+  width: 200px;
+  display: none;
+  background-color: #0f3050;
+  list-style-type: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+.page__nav--mobile > .page__nav__list.active {
+  display: block;
+}
+.page__nav > .page__nav__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.page__nav__link {
+  display: block;
+  padding: 20px 25px;
+  color: #e6e6e6;
+}
+.page__nav__link:hover {
+  color: #78afe6;
+}
+
+.ul--no-disk {
+  list-style-type: none;
+}
+
+.img--block {
+  display: block;
+}
+
+.text--accent {
+  color: #cfff83;
+}
+.text--underline {
+  text-decoration: underline;
+}
+.text--paragraph, .page__articles p {
+  max-width: 45ch;
+}
+
+.a--alternative:hover {
+  color: #e6e6e6;
+}
+
+.page__footer {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  background-color: #cccccc;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  background-image: url("/img/footer_bg.svg");
+}
+@media screen and (max-width: 1024px) {
+  .page__footer {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page__footer {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .page__footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  color: #333333;
+  background-color: #e6e6e6;
+  font-family: "Nunito", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+.h1--main {
+  color: #4d96de;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: gray;
+  font-family: "Montserrat Alternates";
+}
+
+a {
+  color: #4d96de;
+  transition: color ease 0.3s;
+  text-decoration: none;
+}
+a:hover {
+  color: #333333;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.page__articles {
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 50px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+@media screen and (max-width: 1024px) {
+  .page__articles {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page__articles {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .page__articles {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+.page__articles h2 {
+  margin-bottom: 1em;
+}
+.page__articles > article {
+  margin: 50px;
+  flex-grow: 1;
+  flex-basis: 300px;
+}
+@media screen and (max-width: 768px) {
+  .page__articles > article {
+    margin: 30px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .page__articles > article {
+    margin: 20px;
+  }
+}
+.page__padding {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+@media screen and (max-width: 1024px) {
+  .page__padding {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page__padding {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .page__padding {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.page__hero {
+  text-align: center;
+  color: #e6e6e6;
+  background-color: #333333;
+  background-image: url("/img/logo_bg.svg");
+  background-repeat: no-repeat;
+  background-size: 50vw;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  font-size: 1.3em;
+}
+.page__article {
+  font-size: 1.1em;
+  margin: 150px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+.page__article h2 {
+  margin-top: 2em;
+  margin-bottom: 1.7em;
+}
+.page__article p {
+  line-height: 1.7em;
+  margin-bottom: 2em;
+}
+.page__article ul {
+  list-style-position: inside;
+  margin-bottom: 1.7em;
+}
+.page__article li {
+  margin: 0.2em;
+}
+.page__article figcaption {
+  font-size: 0.8em;
+  max-width: 25ch;
+}
+@media screen and (max-width: 1024px) {
+  .page__article {
+    margin: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page__article {
+    margin: 50px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .page__article {
+    margin: 30px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .page__article {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page__article {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .page__article {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

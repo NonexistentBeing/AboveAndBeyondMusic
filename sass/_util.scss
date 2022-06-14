@@ -1,0 +1,28 @@
+@use 'constants' as *;
+
+.ul--no-disk {
+    list-style-type: none;
+}
+
+.img--block {
+    display: block;
+}
+
+.text {
+    &--accent {
+        color: $accent;
+    }
+    &--underline {
+        text-decoration: underline;
+    }
+
+    &--paragraph {
+        max-width: 45ch;
+    }
+}
+
+.a--alternative {
+    &:hover {
+        color: $background;
+    }
+}

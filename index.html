@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The magic of sound</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body class="page">
+        <!-- HEADER -->
+
+        <header class="page__header">
+            <div class="page__header__wrap">
+                <a href="/">
+                    <img
+                        src="/img/logo.svg"
+                        class="img--block page__logo"
+                        alt="WaveSet"
+                        width="125"
+                    />
+                </a>
+                <nav class="page__nav">
+                    <ul class="page__nav__list">
+                        <li><a href="/" class="page__nav__link"> Home </a></li>
+                        <li>
+                            <a href="/sound" class="page__nav__link"> Sound </a>
+                        </li>
+                        <li>
+                            <a href="/music" class="page__nav__link"> Music </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="page__nav--mobile">
+                    <button id="hamburger">
+                        <img
+                            class="img--block"
+                            src="/img/hamburger_arrow.svg"
+                            alt="Arrow"
+                            width="30"
+                        />
+                    </button>
+                    <ul class="page__nav__list">
+                        <li><a href="/" class="page__nav__link"> Home </a></li>
+                        <li>
+                            <a href="/sound" class="page__nav__link"> Sound </a>
+                        </li>
+                        <li>
+                            <a href="/music" class="page__nav__link"> Music </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- MAIN CONTENT -->
+
+        <main class="page__main">
+            <!-- HERO -->
+
+            <section class="page__hero">
+                <h1 class="h1--main">Intro</h1>
+                <p>Above and beyond music.</p>
+            </section>
+
+            <!-- PAGE CONTENT -->
+
+            <section class="page__articles">
+                <article>
+                    <h2>Hero</h2>
+                    <p class="text--paragraph">
+                        This is a text on the <a href="/">website</a>. Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Expedita aspernatur, error sapiente quidem aperiam
+                        aliquam, placeat molestiae qui illum corporis dolore eum
+                        inventore facilis autem. Neque vel culpa perspiciatis
+                        aspernatur reprehenderit ratione enim fuga libero
+                        reiciendis asperiores maxime, blanditiis quasi ducimus
+                        quos quod, deserunt optio cupiditate commodi iure.
+                        Optio, voluptatibus.
+                    </p>
+                </article>
+                <article>
+                    <h2><a href="/sound">Sound</a></h2>
+                    <p>
+                        Discover how every sound around you works. Every song
+                        you hear, every notification on your phone, there is a
+                        staggering number of sounds you hear every day, so
+                        <a href="/sound">let's dig deeper into it!</a>
+                    </p>
+                </article>
+                <article>
+                    <h2><a href="/music">Music</a></h2>
+                    <p>
+                        A major part of our everyday life, makes our heads nod
+                        instinctively, makes us a little happier.
+                        <a href="/music">Learn how!</a>
+                    </p>
+                </article>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="page__footer">
+            <div>
+                <p>Created by Michal Janeček</p>
+            </div>
+        </footer>
+        <script>
+            const mobileList = document.querySelector(
+                '.page__nav--mobile .page__nav__list'
+            );
+            const hamburger = document.getElementById('hamburger');
+            hamburger.addEventListener('click', () => {
+                mobileList.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        </script>
+    </body>
+</html>

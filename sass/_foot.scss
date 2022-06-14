@@ -1,0 +1,12 @@
+@use 'mixins';
+@use 'constants' as *;
+
+.page {
+    &__footer {
+        @include mixins.padding-lr;
+        background-color: lighten($secondary, 60%);
+        padding-top: 30px;
+        padding-bottom: 60px;
+        background-image: url('/img/footer_bg.svg');
+    }
+}

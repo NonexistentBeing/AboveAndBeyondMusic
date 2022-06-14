@@ -1,0 +1,13 @@
+{
+    "name": "web",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "serve": "http-server .",
+        "watch": "sass -w ./sass:./css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

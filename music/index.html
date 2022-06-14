@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The magic of sound</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body class="page">
+        <!-- HEADER -->
+
+        <header class="page__header">
+            <div class="page__header__wrap">
+                <a href="/">
+                    <img
+                        src="/img/logo.svg"
+                        class="img--block page__logo"
+                        alt="WaveSet"
+                        width="125"
+                    />
+                </a>
+                <nav class="page__nav">
+                    <ul class="page__nav__list">
+                        <li><a href="/" class="page__nav__link"> Home </a></li>
+                        <li>
+                            <a href="/sound" class="page__nav__link"> Sound </a>
+                        </li>
+                        <li>
+                            <a href="/music" class="page__nav__link"> Music </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="page__nav--mobile">
+                    <button id="hamburger">
+                        <img
+                            class="img--block"
+                            src="/img/hamburger_arrow.svg"
+                            alt="Arrow"
+                            width="30"
+                        />
+                    </button>
+                    <ul class="page__nav__list">
+                        <li><a href="/" class="page__nav__link"> Home </a></li>
+                        <li>
+                            <a href="/sound" class="page__nav__link"> Sound </a>
+                        </li>
+                        <li>
+                            <a href="/music" class="page__nav__link"> Music </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- MAIN CONTENT -->
+
+        <main class="page__main">
+            <!-- HERO -->
+
+            <section>
+                <div class="page__hero">
+                    <h1 class="h1--main">Music</h1>
+                    <p>
+                        Because how else could we follow up the topic of
+                        <a href="/sound" class="a--alternative">sound</a>.
+                    </p>
+                </div>
+
+                <!-- PAGE CONTENT -->
+
+                <article class="page__article">
+                    <h2 id="music">The infinite world of music</h2>
+                    <p>
+                        Let's start with that. We all know it, but what is it
+                        really? It's all around us, enchanting us. And yet all
+                        it truly is is a systematic organization of sound. As
+                        simple as the definition can be, we created universes
+                        both around and with it!
+                    </p>
+                    <h2 id="music-from-nothing">Music from nothing</h2>
+                    <p>
+                        Nowadays, there is a science describing about
+                        everything, of course there will be one describing how
+                        to "properly" create art that revolves completely around
+                        sound. The building block of music is a
+                        <strong>note</strong>, it's just an instruction to play,
+                        but what and how? That's where <strong>tone</strong> and
+                        <strong>length</strong> comes in, I think length is
+                        somewhat self-explanatory, <strong>tone</strong>,
+                        however, is much more complicated, in Western culture we
+                        have eleven distinct tones that repeat (a repetition is
+                        generally called an <strong>octave</strong>), we can
+                        compare them, one can be higher than other. Not only
+                        that, but between every note, there is a certain
+                        mathematical relationship, and this relationship will be
+                        preserved even when we move around.
+                    </p>
+                    <p>
+                        Of course music doesn't exist for a week, not a month,
+                        not a year, it's almost as old as humanity itself, and
+                        thus had some time to develop, and despite having 12
+                        different tones in an octave, we settled on different
+                        combinations of 8 tones, which help us establish a
+                        certain mood, we tend to name these
+                        <strong>scales</strong>. Of course there are tools we
+                        use to switch between those and it can get really
+                        complicated, but that's the magic. Although everything
+                        may seem tremendously difficult to take up, but once you
+                        reach a certain information threshold, everything is
+                        connected, you'll get to see an entire web form.
+                    </p>
+                    <h2 id="rhythmanditspurpose">Rhythm and its purpose</h2>
+                    <p>
+                        In the previous section I described notes and how each
+                        one has a length assigned. There's one fundamental
+                        concept yet to be mentioned, and the wild concept is…
+                        nothing! Silence is the most powerful instrument, as it
+                        helps build suspense waiting to be released. A silence
+                        is just like a note, except it can't have a tone, it can
+                        only have its length. A silent note is brilliantly named
+                        <strong>rest</strong>, and it helps us build the
+                        patterns in time domain, also referred to as
+                        <strong>rhythm</strong>. It's the part of music that
+                        dictates us when and how to move. It's the heart and the
+                        drive of every musical piece, and should not be
+                        underestimated.
+                    </p>
+                    <h2 id="melodyintervalsandchords">
+                        Melody, intervals and chords
+                    </h2>
+                    <p>
+                        With rhythm out of the way, we can finally start
+                        building cohesive pieces. A
+                        <strong>melody</strong> is a combination of a rhythm and
+                        a succession of musical tones. More than one note can be
+                        stacked in order to create musical context for the
+                        melody, two notes make an <strong>interval</strong>,
+                        three or more notes form a <strong>chord</strong>, these
+                        are mostly used to provide musical context, also known
+                        as harmony.
+                    </p>
+                </article>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="page__footer">
+            <div>
+                <p>Created by Michal Janeček</p>
+            </div>
+        </footer>
+        <script>
+            const mobileNav = document.querySelector(
+                '.page__nav--mobile .page__nav__list'
+            );
+            const hamburger = document.getElementById('hamburger');
+            hamburger.addEventListener('click', () => {
+                mobileNav.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+@use 'constants' as *;
+@use 'mixins';
+@use 'head';
+@use 'util';
+@use 'foot';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Oswald:wght@400;700&family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    color: $text;
+    background-color: $background;
+    font-family: 'Nunito', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+h1 {
+    @include mixins.media(3em, null, null, 2em) using ($value) {
+        font-size: $value;
+    }
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 10px;
+}
+
+.h1 {
+    &--main {
+        color: $main;
+    }
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: lighten($text, 30%);
+    font-family: 'Montserrat Alternates';
+}
+
+a {
+    color: $main;
+    transition: color ease 0.3s;
+    text-decoration: none;
+
+    &:hover {
+        color: $text;
+    }
+}
+
+.page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    &__articles {
+        font-size: 1.1em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 50px;
+        @include mixins.margin-lr;
+
+        h2 {
+            margin-bottom: 1em;
+        }
+
+        p {
+            @extend .text--paragraph;
+        }
+
+        > article {
+            @include mixins.media(50px, null, 30px, 20px) using ($value) {
+                margin: $value;
+            }
+            flex-grow: 1;
+            flex-basis: 300px;
+        }
+    }
+
+    &__padding {
+        @include mixins.padding-lr;
+    }
+
+    &__hero {
+        text-align: center;
+        color: $background;
+        background-color: $secondary;
+        background-image: url('/img/logo_bg.svg');
+        background-repeat: no-repeat;
+        background-size: 50vw;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        font-size: 1.3em;
+    }
+
+    &__article {
+        font-size: 1.1em;
+
+        h2 {
+            margin-top: 2em;
+            margin-bottom: 1.7em;
+        }
+
+        p {
+            line-height: 1.7em;
+            margin-bottom: 2em;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-bottom: 1.7em;
+        }
+
+        li {
+            margin: 0.2em;
+        }
+
+        figcaption {
+            font-size: 0.8em;
+            max-width: 25ch;
+        }
+
+        @include mixins.media(150px, 100px, 50px, 30px) using ($value) {
+            margin: $value;
+        }
+        @include mixins.padding-lr;
+    }
+}
