@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "serve": "sass -w ./sass:./css && http-server .",
+        "serve": "http-server .",
         "watch": "sass -w ./sass:./css"
     },
     "keywords": [],
