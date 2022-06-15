@@ -5,6 +5,16 @@
 Webové stránky jsou jen tak dobré, jak dobrý je jejich obsah, proto jsem se řídil přístupem _CONTENT-FIRST_ a nedříve napsal text ve formátu markdown,
 který jsem nakonec zkompiloval do HTML a po minimálním zpracování vložil do layout šablony.
 
+## Stránka obsahuje
+
+-   navigaci + dropdown menu pro mobilní zařízení
+-   metadata (description, keywords, viewport)
+-   atributu \[lang="en"\]
+-   responzivní layout pomocí css flex a grid, který zabírá vždy alespoň 100% viewportu
+-   sémantické rozdělení stránky pomocí tagů header, main, footer
+-   tagy strong em a dfn
+-   tabulku
+
 ## Prostředky/jazyky použité na stránku
 
 -   HTML, CSS, JS
