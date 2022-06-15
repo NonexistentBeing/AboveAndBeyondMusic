@@ -25,6 +25,8 @@ který jsem nakonec zkompiloval do HTML a po minimálním zpracování vložil d
 -   **index.html** - landing page webové stránky
 -   **README.md** - popisuje projekt na repozitáři git
 -   **package.json** - obsahuje npm skripty na jednodušší development
+-   **package-lock.json** - popisuje stromovou strukturu node_modules po instalaci
+-   **.gitignore** - zaručí, že se soubory nebudou trackovat v gitu
 
 ## How to run
 
