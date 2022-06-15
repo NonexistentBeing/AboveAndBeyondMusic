@@ -30,7 +30,7 @@
 
 .table {
     border-collapse: collapse;
-    margin-bottom: 3.5em;
+    margin-bottom: 2em;
 
     caption {
         font-size: 0.8em;
@@ -49,5 +49,13 @@
 
     &--full {
         width: 100%;
+    }
+}
+
+.figure {
+    &--block {
+        display: block;
+        width: 100%;
+        margin-bottom: 3em;
     }
 }

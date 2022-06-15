@@ -7,13 +7,15 @@ který jsem nakonec zkompiloval do HTML a po minimálním zpracování vložil d
 
 ## Stránka obsahuje
 
--   navigaci + dropdown menu pro mobilní zařízení
--   metadata (description, keywords, viewport)
+-   navigaci + javascript dropdown menu pro mobilní zařízení
+-   kompletní hlavičku
+    -   metadata (description, keywords, viewport)
+    -   title
+    -   favicon
 -   atributu \[lang="en"\]
 -   responzivní layout pomocí css flex a grid, který zabírá vždy alespoň 100% viewportu
 -   sémantické rozdělení stránky pomocí tagů header, main, footer
--   tagy strong em a dfn
--   tabulku
+-   sémantické tagy strong em a dfn
 -   přístupnost pro lidi se zrakovou vadou (Google chrome Lighthouse audit)
 
 ## Prostředky/jazyky použité na stránku
@@ -29,6 +31,7 @@ který jsem nakonec zkompiloval do HTML a po minimálním zpracování vložil d
 
 -   **css** - obsahuje zkompilované css soubory
 -   **sass** - obsahuje neprocesované scss/sass soubory
+-   **audio** - obsahuje zvukové soubory
 -   **music, sound**
     -   **content.md** - markdown verze obsahu
     -   **content.html** - zkompilovaný soubor content.md
@@ -41,5 +44,5 @@ který jsem nakonec zkompiloval do HTML a po minimálním zpracování vložil d
 
 ## How to run
 
-Ke spuštění stránky stačí mít nainstalovaný node.js a v terminállu napsat `npm install && npm run serve`
+Ke spuštění stránky stačí mít nainstalovaný node.js a do terminállu zkopírovat `npm install && npm run serve`
 nebo použít libovolný server a nasměrovat ho na kořenový adresář repozitáře
