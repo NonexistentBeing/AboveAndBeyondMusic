@@ -14,6 +14,7 @@ který jsem nakonec zkompiloval do HTML a po minimálním zpracování vložil d
 -   sémantické rozdělení stránky pomocí tagů header, main, footer
 -   tagy strong em a dfn
 -   tabulku
+-   přístupnost pro lidi se zrakovou vadou (Google chrome Lighthouse audit)
 
 ## Prostředky/jazyky použité na stránku
 
