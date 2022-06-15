@@ -23,7 +23,7 @@
 }
 .page__header {
   font-size: 1.1em;
-  background-color: #242424;
+  background-color: hsl(0deg, 0%, 14%);
 }
 .page__header__wrap {
   display: flex;
@@ -71,7 +71,7 @@
 .page__nav--mobile > .page__nav__list {
   width: 200px;
   display: none;
-  background-color: #0f3050;
+  background-color: black;
   list-style-type: none;
   position: absolute;
   top: 100%;
@@ -91,7 +91,7 @@
   color: #e6e6e6;
 }
 .page__nav__link:hover {
-  color: #78afe6;
+  color: #0d7ce9;
 }
 
 .ul--no-disk {
@@ -112,8 +112,31 @@
   max-width: 45ch;
 }
 
+.a--alternative {
+  color: #3595f4;
+}
 .a--alternative:hover {
   color: #e6e6e6;
+}
+
+.table {
+  border-collapse: collapse;
+  margin-bottom: 3.5em;
+}
+.table caption {
+  font-size: 0.8em;
+  padding: 5px;
+  text-align: left;
+}
+.table td,
+.table th {
+  padding: 5px;
+}
+.table tbody tr:nth-child(2n) {
+  background-color: #cdcdcd;
+}
+.table--full {
+  width: 100%;
 }
 
 .page__footer {
@@ -153,7 +176,7 @@
 }
 
 body {
-  color: #333333;
+  color: hsl(0deg, 0%, 20%);
   background-color: #e6e6e6;
   font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -173,7 +196,7 @@ h1 {
 }
 
 .h1--main {
-  color: #4d96de;
+  color: #3595f4;
 }
 
 h2 {
@@ -184,12 +207,12 @@ h2 {
 }
 
 a {
-  color: #4d96de;
+  color: #0a62b9;
   transition: color ease 0.3s;
   text-decoration: none;
 }
 a:hover {
-  color: #333333;
+  color: hsl(0deg, 0%, 20%);
 }
 
 .page {
@@ -270,7 +293,7 @@ a:hover {
   align-items: center;
   text-align: center;
   color: #e6e6e6;
-  background-color: #333333;
+  background-color: hsl(0deg, 0%, 20%);
   background-image: url("/img/logo_bg.svg");
   background-repeat: no-repeat;
   background-size: 50vw;

@@ -8,7 +8,12 @@
             name="keywords"
             content="sound, music, learn, resource, oscillator, frequency, decibel"
         />
-        <title>The magic of sound</title>
+        <meta
+            name="description"
+            content="Simplified description of the enchanting physics that teaches us how sound works."
+        />
+
+        <title>Above and beyond</title>
         <link rel="stylesheet" href="/css/style.css" />
     </head>
     <body class="page">
@@ -92,14 +97,16 @@
                         What do we measure in sound? There is a copious number
                         of units we can look at, however there are three
                         fundamental which we will look at. First off, we measure
-                        the immediate sound pressure in <em>decibels (dB)</em>.
-                        The second property we will look at is the
-                        <strong>amplitude</strong>, which is the absolute peak
-                        value of the signal. Last but not least we can measure
-                        is exclusively in periodic signals
-                        <strong>frequency</strong>, which is how many times the
-                        signal repeats over a certain time period. We call this
-                        unit one <em>hertz (Hz)</em>.
+                        the immediate sound pressure in
+                        <em><dfn title="Decibel">dB</dfn> = decibels</em>. The
+                        second property we will look at is the
+                        <strong id="amplitude">amplitude</strong>, which is the
+                        absolute peak value of the signal. Last but not least we
+                        can measure is exclusively in periodic signals
+                        <strong id="frequency">frequency</strong>, which is how
+                        many times the signal repeats over a certain time
+                        period. We call this unit one
+                        <em><dfn title="Hertz">HZ</dfn> hertz (Hz)</em>.
                     </p>
                     <h2 id="oscillators">Oscillators</h2>
                     <figure style="float: right">
@@ -178,14 +185,63 @@
                     <p>
                         So now back to saw wave - if we have a fundamental
                         frequency at 100Hz, then a saw wave would be the
-                        infinite sum of harmonics at fractional amplitudes.
+                        infinite sum of harmonics at fractional amplitudes. The
+                        table below shows how a saw wave at 100Hz would be
+                        constructed
                     </p>
+                    <table class="table--full table">
+                        <caption>
+                            Table 1.1: Building a saw wave
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th style="text-align: left">
+                                    <a href="#harmonics">Harmonic</a>
+                                </th>
+                                <th style="text-align: right">
+                                    <a href="#frequency">Frequency</a>
+                                </th>
+                                <th style="text-align: right">
+                                    <a href="#amplitude">Amplitude</a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left">Fundamental</td>
+                                <td style="text-align: right">100 Hz</td>
+                                <td style="text-align: right">1 dB</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">2nd harmonic</td>
+                                <td style="text-align: right">200 Hz</td>
+                                <td style="text-align: right">1/2 dB</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">3rd harmonic</td>
+                                <td style="text-align: right">300 Hz</td>
+                                <td style="text-align: right">1/3 dB</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">4th harmonic</td>
+                                <td style="text-align: right">400 Hz</td>
+                                <td style="text-align: right">1/4 dB</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">n-th harmonic</td>
+                                <td style="text-align: right">n*100 Hz</td>
+                                <td style="text-align: right">1/n dB</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <p>
                         <b>Optimization note:</b>
-                        <i
-                            >Technically, a sound can have infinitely many
+                        <i>
+                            Technically, a sound can have infinitely many
                             harmonics, but for performance sake, we usually
-                            render around 500 when we render them individually
+                            render around 500 when we render them individually,
+                            because it's usually enough to cover the whole
+                            audible frequency spectrum.
                         </i>
                     </p>
 

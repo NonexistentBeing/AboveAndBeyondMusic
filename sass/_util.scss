@@ -22,7 +22,32 @@
 }
 
 .a--alternative {
+    color: lighten($main, 20%);
     &:hover {
         color: $background;
+    }
+}
+
+.table {
+    border-collapse: collapse;
+    margin-bottom: 3.5em;
+
+    caption {
+        font-size: 0.8em;
+        padding: 5px;
+        text-align: left;
+    }
+
+    td,
+    th {
+        padding: 5px;
+    }
+
+    tbody tr:nth-child(2n) {
+        background-color: darken($background, 10%);
+    }
+
+    &--full {
+        width: 100%;
     }
 }
